@@ -11,7 +11,7 @@ public class CommonUtil {
 
     public static void delay(long delayMilliSeconds)  {
         try{
-            sleep(delayMilliSeconds);
+            sleep(delayMilliSeconds); // so it's not CPU intensive, so the thread pool should be >> number of processors
         }catch (Exception e){
             LoggerUtil.log("Exception is :" + e.getMessage());
         }
